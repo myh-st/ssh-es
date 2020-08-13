@@ -8,7 +8,7 @@ if [ $? -eq 0 ]
 then
 echo "$HOST,SUCCESS" >> rdp-result/rdp-passed_$NOW.csv
 else
-echo "$HOST,FAILED" >> rdp-result/ssh-failed_$NOW.csv
+echo "$HOST,FAILED" >> rdp-result/rdp-failed_$NOW.csv
 fi
 done
 cat rdp-result/rdp-passed_$NOW.csv rdp-result/rdp-failed_$NOW.csv > rdp-result/rdp2es/result.csv

@@ -6,8 +6,10 @@ do
 nc -z -v $HOST 22
 if [ $? -eq 0 ]
 then
+echo "$HOST,SUCCESS"
 echo "$HOST,SUCCESS" >> ssh-result/post-test/ssh-passed_$NOW.csv
 else
+echo "$HOST,FAILED"
 echo "$HOST,FAILED" >> ssh-result/post-test/ssh-failed_$NOW.csv
 fi
 done

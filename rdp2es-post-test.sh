@@ -6,8 +6,10 @@ do
 nc -z -v $HOST 3389
 if [ $? -eq 0 ]
 then
+echo "$HOST,SUCCESS"
 echo "$HOST,SUCCESS" >> rdp-result/post-test/rdp-passed_$NOW.csv
 else
+echo "$HOST,FAILED"
 echo "$HOST,FAILED" >> rdp-result/post-test/rdp-failed_$NOW.csv
 fi
 done

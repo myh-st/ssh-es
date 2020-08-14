@@ -1,5 +1,8 @@
 #!/bin/bash
 NOW=$(date +"%m-%d-%Y_%Hh%Mm")
+echo ""
+echo "RDP PRE-TEST"
+echo ""
 > rdp-result/pre-test/rdp2es/result.csv
 for HOST in `cat hosts.txt`
 do

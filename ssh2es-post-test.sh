@@ -1,5 +1,8 @@
 #!/bin/bash
 NOW=$(date +"%m-%d-%Y_%Hh%Mm")
+echo ""
+echo "SSH POST-TEST"
+echo ""
 > ssh-result/post-test/ssh2es/result.csv
 for HOST in `cat hosts.txt`
 do

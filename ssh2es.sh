@@ -3,7 +3,9 @@ NOW=$(date +"%m-%d-%Y_%Hh%Mm")
 > ssh-result/ssh2es/result.csv
 for HOST in `cat hosts.txt`
 do
-nc -z -v $HOST 22
+
+
+nc -w 1 -z -v $HOST 22
 if [ $? -eq 0 ]
 then
 echo "$HOST,SUCCESS" >> ssh-result/ssh-passed_$NOW.csv

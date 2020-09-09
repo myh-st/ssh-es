@@ -6,7 +6,9 @@ echo ""
 > rdp-result/pre-test/rdp2es/result.csv
 for HOST in `cat hosts.txt`
 do
-nc -z -v $HOST 3389
+
+
+nc -w 1 -z -v $HOST 3389
 if [ $? -eq 0 ]
 then
 echo "$HOST,SUCCESS"

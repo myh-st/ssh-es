@@ -3,6 +3,9 @@ NOW=$(date +"%m-%d-%Y_%Hh%Mm")
 echo ""
 echo "RDP POST-TEST"
 echo ""
+if [  ! -d rdp-result/post-test/rdp2es ]; then
+mkdir -p rdp-result/post-test/rdp2es
+fi
 > rdp-result/post-test/rdp2es/result.csv
 for HOST in `cat hosts.txt`
 do

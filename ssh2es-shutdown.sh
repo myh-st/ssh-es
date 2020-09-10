@@ -3,6 +3,9 @@ NOW=$(date +"%m-%d-%Y_%Hh%Mm")
 echo ""
 echo "SSH SHUTDOWN"
 echo ""
+if [  ! -d ssh-result/shutdown/ssh2es ]; then
+mkdir -p ssh-result/shutdown/ssh2es
+fi
 > ssh-result/shutdown/ssh2es/result.csv
 for HOST in `cat hosts.txt`
 do

@@ -3,6 +3,9 @@ NOW=$(date +"%m-%d-%Y_%Hh%Mm")
 echo ""
 echo "SSH PRE-TEST"
 echo ""
+if [  ! -d ssh-result/pre-test/ssh2es ]; then
+mkdir -p ssh-result/pre-test/ssh2es
+fi
 > ssh-result/pre-test/ssh2es/result.csv
 for HOST in `cat hosts.txt`
 do

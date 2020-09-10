@@ -3,6 +3,9 @@ NOW=$(date +"%m-%d-%Y_%Hh%Mm")
 echo ""
 echo "RDP SHUTDOWN"
 echo ""
+if [  ! -d rdp-result/shutdown/rdp2es ]; then
+mkdir -p rdp-result/shutdown/rdp2es
+fi
 > rdp-result/shutdown/rdp2es/result.csv
 for HOST in `cat hosts.txt`
 do
